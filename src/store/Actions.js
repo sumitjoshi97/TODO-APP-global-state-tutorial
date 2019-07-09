@@ -13,7 +13,6 @@ export const removeTodo = (todoId, dispatch) => {
 }
 
 export const editTag = (todoId, tag, dispatch) => {
-  console.log('action tag', todoId, tag)
   dispatch({
     type: 'EDIT_TODO_TAG',
     todoId,
