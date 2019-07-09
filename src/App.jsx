@@ -7,8 +7,11 @@ import './App.css'
 export default function App() {
   return (
     <div className="App">
-      <TodoForm />
-      <TodoList />
+      <h1>Todo App</h1>
+      <div>
+        <TodoForm />
+        <TodoList />
+      </div>
     </div>
   )
 }
