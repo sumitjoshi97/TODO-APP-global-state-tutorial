@@ -10,6 +10,7 @@ export default function TodoForm() {
     setTodo(e.target.value)
   }
 
+  // submits todo to context store and set todo form input to blank
   const handleTodoSubmit = e => {
     e.preventDefault()
     todo.trim().length > 0 && addTodo(todo, dispatch)
