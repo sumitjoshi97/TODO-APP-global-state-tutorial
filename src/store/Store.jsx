@@ -27,10 +27,12 @@ const editTodoTag = (state, todoId, tag) => {
   const todoIndex = state.todos.indexOf(todo)
   const newTodo = { ...todo, tag }
 
-  const newTodos = state.todos
-    .slice(0, todoIndex)
-    .concat(newTodo)
-    .concat(state.todos.slice(todoIndex + 1))
+  const newTodos = [
+    ...state.todos.slice(0, todoIndex),
+    newTodo,
+    ...state.todos.slice(todoIndex + 1),
+  ]
+
   return { ...state, todos: newTodos }
 }
 
