@@ -1,7 +1,7 @@
 # TODO app - global state tutorial
 
 This is a tutorial react app made to demostrate how to use global state using hooks and context API.
-For the tutorial you can go to medium article.
+For the tutorial you can go to [medium article](https://medium.com/@sumitjoshi97/mimic-redux-with-react-context-api-and-hooks-21fbec280205).
 
 ## Local Installation
 
