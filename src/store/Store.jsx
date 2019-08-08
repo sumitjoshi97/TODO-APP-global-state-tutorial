@@ -49,8 +49,15 @@ const reducer = (state, action) => {
   }
 }
 
-export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+export const StoreProvider = props => {
+  const [state, dispatch] = useReducer(
+    reducer,
+    props.initialState || initialState
+  )
 
-  return <Store.Provider value={{ state, dispatch }}>{children}</Store.Provider>
+  return (
+    <Store.Provider value={{ state, dispatch }}>
+      {props.children}
+    </Store.Provider>
+  )
 }
