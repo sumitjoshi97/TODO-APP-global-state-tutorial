@@ -11,6 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=true",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -26,6 +27,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^8.0.8"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/store/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js"
     ]
   }
 }
