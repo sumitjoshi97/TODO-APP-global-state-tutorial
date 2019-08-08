@@ -19,8 +19,15 @@ export default function TodoForm() {
 
   return (
     <form onSubmit={handleTodoSubmit} className="todo-form">
-      <input type="text" value={todo} onChange={handleTodoInput} />
-      <button type="submit">Add Todo</button>
+      <input
+        type="text"
+        value={todo}
+        data-testid="todo-input"
+        onChange={handleTodoInput}
+      />
+      <button data-testid="todo-submit" type="submit">
+        Add Todo
+      </button>
     </form>
   )
 }

@@ -22,11 +22,13 @@ const Todo = memo(function Todo(props) {
   }
 
   return (
-    <div className="todo">
-      <span style={todoStyle} onClick={handleTodoTag}>
+    <div className="todo" data-testid="todo">
+      <span style={todoStyle} onClick={handleTodoTag} data-testid={todoTag}>
         {todoText}
       </span>
-      <button onClick={handleRemoveTodo}>x</button>
+      <button data-testid="remove-todo" onClick={handleRemoveTodo}>
+        x
+      </button>
     </div>
   )
 })
